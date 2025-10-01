@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import UserContext from '../Context/UserContext'
 
 export default function Login() {
@@ -8,7 +8,7 @@ export default function Login() {
   const { setUser } = useContext(UserContext)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault() // to prevent page reload
     setUser({ username, password })
     setUsername("")
     setPassword("")
